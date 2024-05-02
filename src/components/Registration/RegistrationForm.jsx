@@ -7,6 +7,9 @@ import { ChooseCountry } from '../Details/ChooseCountry'
 import { City } from '../Details/City'
 import { State } from '../Details/State'
 import { Zip } from '../Details/Zip'
+import { About } from '../Details/About'
+import { Email } from '../Details/Email'
+import { Gender } from '../Details/Gender'
 
 const RegistrationForm = () => {
   const [formSubmit, setFormSubmit] = useState({
@@ -62,6 +65,9 @@ const RegistrationForm = () => {
       </FormGroup>
       <FormGroup>
         <Row>
+          <About value={formSubmit.about} onChange={handleChange} />
+          <Email value={formSubmit.email} onChange={handleChange} />
+          <Gender value={formSubmit.gender} onChange={handleChange} />
           <Col sm={{ offset: 4, size: 6 }}>
             <Button >
               Remember My Info
