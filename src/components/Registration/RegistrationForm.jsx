@@ -2,6 +2,8 @@ import { FirstName } from '../Details/FirstName'
 import { LastName } from '../Details/LastName'
 import { useState } from 'react'
 import { Form, Button, Row, Col, FormGroup } from 'reactstrap'
+import { BirthDate } from '../Details/BirthDate'
+import { ChooseCountry } from '../Details/ChooseCountry'
 
 const RegistrationForm = () => {
   const [formSubmit, setFormSubmit] = useState({
@@ -35,6 +37,12 @@ const RegistrationForm = () => {
         <Row>
           <FirstName value={formSubmit.firstName} onChange={handleChange} />
           <LastName value={formSubmit.lastName} onChange={handleChange} />
+        </Row>
+      </FormGroup>
+      <FormGroup>
+        <Row>
+          <BirthDate value={formSubmit.date} onChange={handleChange} />
+          <ChooseCountry value={formSubmit.country} onChange={handleChange} />
         </Row>
       </FormGroup>
       <FormGroup>
