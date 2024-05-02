@@ -4,11 +4,19 @@ import { useState } from 'react'
 import { Form, Button, Row, Col, FormGroup } from 'reactstrap'
 import { BirthDate } from '../Details/BirthDate'
 import { ChooseCountry } from '../Details/ChooseCountry'
+import { City } from '../Details/City'
+import { State } from '../Details/State'
+import { Zip } from '../Details/Zip'
 
 const RegistrationForm = () => {
   const [formSubmit, setFormSubmit] = useState({
     firstName: '',
-    lastName: ''
+    lastName: '',
+    date: '',
+    country: '',
+    city: '',
+    state: '',
+    zip: ''
   });
   const [submitted, setSubmitted] = useState(false);
 
@@ -43,6 +51,13 @@ const RegistrationForm = () => {
         <Row>
           <BirthDate value={formSubmit.date} onChange={handleChange} />
           <ChooseCountry value={formSubmit.country} onChange={handleChange} />
+        </Row>
+      </FormGroup>
+      <FormGroup>
+        <Row>
+          <City value={formSubmit.city} onChange={handleChange} />
+          <State value={formSubmit.state} onChange={handleChange} />
+          <Zip value={formSubmit.zip} onChange={handleChange} />
         </Row>
       </FormGroup>
       <FormGroup>
