@@ -1,0 +1,26 @@
+body{
+  margin: 0;
+  padding: 40px;
+  font-family: 'Times New Roman', Times, serif;
+  background-color: rgb(231, 231, 217);
+  color: rgb(37, 32, 32);
+  font-weight: 600;
+}
+
+.submitted-information {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.submitted-information h2 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.submitted-information p {
+  margin-bottom: 5px;
+}
